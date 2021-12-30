@@ -28,6 +28,15 @@ public class JUCUtils {
     }
 
 
+    public static void sleep(double secs){
+        try {
+            TimeUnit.MILLISECONDS.sleep((long)secs * 1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 
 }

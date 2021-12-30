@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
  * @version: 1.0.0
  */
 @Slf4j
-public class waitNotifyTest {
+public class WaitNotifyTest {
 
     final static Object obj = new Object();
     //烟
@@ -20,10 +20,10 @@ public class waitNotifyTest {
 
     public static void main(String[] args) {
         //api基本使用
-        test1();
+        //test1();
 
         //wait&notify配合使用
-        //test2();
+        test2();
     }
 
     //api基本使用
