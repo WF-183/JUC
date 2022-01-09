@@ -1,5 +1,6 @@
 package com.andy.nolock;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -24,8 +25,8 @@ public class AtomicIntegerTest {
         atomicInteger.getAndAdd(5);// 先get，再加n
         atomicInteger.addAndGet(5);// 先加n，再get
         //任意加减乘除运算
-        atomicInteger.getAndUpdate(item->item*5);// 先get，再运算
-        atomicInteger.updateAndGet(item->item*5);// 先运算，再get
+        atomicInteger.getAndUpdate(item -> item * 5);// 先get，再运算
+        atomicInteger.updateAndGet(item -> item * 5);// 先运算，再get
 
         //任意加减乘除运算
         // 获取并计算 (p 为 atomicInteger 的当前值, x 为参数1)
@@ -34,4 +35,7 @@ public class AtomicIntegerTest {
         System.out.println(atomicInteger.accumulateAndGet(-10, (item, x) -> item + x));
 
     }
+
+
+
 }
